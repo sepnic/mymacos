@@ -45,3 +45,32 @@ cp tools/terminal/zshrc ~/.zshrc
 ```
 
 默认安装已配置主题为 `agnoster`，语法高亮，隐藏用户名和主机名，如需修改请参考 `~/.zshrc`
+
+## 安装 AndroidStudio
+
+1. 安装 openjdk 8：https://adoptopenjdk.net/ 默认安装在 `/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk`
+
+2. 安装 Android Studio 和 NDK
+
+3. 环境变量设置，JAVA/AndroidSDK/NDK 的路径根据实际情况来设置，建议写到 `~/.zshrc`，参考如下：
+
+```
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export CLASS_PATH=${JAVA_HOME}/bin
+export ANDROID_HOME=${HOME}/Documents/Tools/Android/sdk
+export ANDROID_SDK=${ANDROID_HOME}
+export ANDROID_SDK_ROOT=${ANDROID_HOME}
+export ANDROID_NDK_VERSION=19
+export ANDROID_NDK=${HOME}/Documents/Tools/Android/sdk/ndk/android-ndk-r19c
+export ANDROID_NDK_ROOT=${ANDROID_NDK}
+export ANDROID_NDK_TOOLS=${ANDROID_NDK}/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin
+export PATH=$PATH:$JAVA_HOME:$ANDROID_HOME:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/:$ANDROID_NDK:$ANDROID_NDK_TOOLS
+export PATH=$PATH:/usr/local/bin:${HOME}/bin:/Applications/CMake.app/Contents/bin
+export CMAKE=/Applications/CMake.app/Contents/bin
+```
+
+## 安装其他
+
+1. 安装 cmake 工具： 'tools/cmake-3.17.3-Darwin-x86_64.dmg'
+2. 安装 SublimeText 代码编辑器：'tools/Sublime Text Build 3211.dmg'
+3. 安装 Xcode
