@@ -21,3 +21,18 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 
 brew upate
 ```
+
+## 安装和配置 iTerm2
+
+1. 解压 tools/terminal/iTerm2-3_3_12.zip 并安装
+
+2. 安装字体：'tools/terminal/Meslo LG M Regular for Powerline.ttf'
+
+3. 打开 iTerm2
+
+4. 在 `Preferences -> Profiles -> Text -> Font` 选择 `Meslo LG M Regular for Powerline` 字体，字体大小调整到 14px
+
+5. 在 `Preferences -> Profiles -> Colors -> Color Presets` 选择 `Tango Dark` 主题
+
+6. 在 `Preferences -> Profiles -> General -> Working Directory` 选择 `Reuse previous session's directory`，这样打开新窗口会继承上一个回话的位置
+
