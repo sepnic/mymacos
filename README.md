@@ -9,7 +9,7 @@
 - 镜像安装：由于国内被墙的原因，很多时候官网安装很慢或者安装不了，可通过国内镜像安装
 
 ```
-./tools/brew_install.sh  ## 修改 BREW_REPO 为 https://mirrors.ustc.edu.cn/brew.git
+./tools/brew_install.sh  ## 修改 BREW_REPO 为 https://mirrors.ustc.edu.cn/brew.git，已修改好，直接执行安装即可，也可替换其他镜像地址
 git clone git://mirrors.ustc.edu.cn/homebrew-core.git/ /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core --depth=1
 
 export PATH=$PATH:/usr/local/bin ## brew 命令放在 /usr/local/bin 目录，需要添加该环境变量
@@ -36,3 +36,12 @@ brew upate
 
 6. 在 `Preferences -> Profiles -> General -> Working Directory` 选择 `Reuse previous session's directory`，这样打开新窗口会继承上一个回话的位置
 
+## 安装和配置 oh-my-zsh
+
+```
+cp -a tools/terminal/ohmyzsh ~/.oh-my-zsh
+tools/terminal/ohmyzsh/tools/install.sh
+cp tools/terminal/zshrc ~/.zshrc
+```
+
+默认安装已配置主题为 `agnoster`，语法高亮，隐藏用户名和主机名，如需修改请参考 `~/.zshrc`
